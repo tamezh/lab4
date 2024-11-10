@@ -1,0 +1,26 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Starts the HTML document and sets the language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <title>Number Loop Example</title> <!-- Sets the title of the page -->
+</head>
+<body> <!-- Begins the body of the HTML document -->
+
+    <p id="demo"></p> <!-- Creates a paragraph with an id "demo" where the output will be displayed -->
+
+    <script>
+        let text = ""; 
+        // Initializes an empty string variable called 'text' to store each line of output
+
+        for (let i = 1; i <= 5; i++) { 
+            // A 'for' loop that starts with i = 1, continues as long as i <= 5, and increases i by 1 each time
+            text += "The number is " + i + "<br>"; 
+            // Concatenates (adds) the string "The number is " followed by the current value of i and a line break to 'text'
+        }
+
+        document.getElementById("demo").innerHTML = text; 
+        // Finds the HTML element with id "demo" and sets its inner HTML content to the value of 'text'
+    </script> <!-- Ends the script section -->
+
+</body> <!-- Closes the body of the HTML document -->
+</html> <!-- Closes the HTML document -->

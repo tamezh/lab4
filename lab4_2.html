@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Opens the HTML document and sets the language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8, allowing for a wide range of characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page scales correctly on all devices -->
+    <title>Number Validation</title> <!-- Sets the title of the HTML document, which appears on the browser tab -->
+</head>
+<body> <!-- Opens the body section, which contains the main content of the webpage -->
+
+    <!-- Input field where the user can enter a number -->
+    <input type="text" id="userInput" placeholder="Enter a number">
+    <!-- A button that triggers the checkInput() function when clicked -->
+    <button onclick="checkInput()">Check</button>
+
+    <!-- JavaScript section that contains the checkInput function -->
+    <script>
+        function checkInput() { // Defines a JavaScript function named checkInput
+            const input = document.getElementById("userInput").value; 
+            // Gets the value from the input field with id "userInput" and stores it in a variable named 'input'
+
+            const number = parseFloat(input); 
+            // Tries to convert the 'input' variable to a floating-point number and stores the result in 'number'
+            
+            if (isNaN(number)) { 
+                // Checks if 'number' is Not-a-Number (NaN), which happens if the user enters non-numeric input
+                alert("Please insert a number!"); 
+                // If 'number' is NaN, this line shows an alert box with a message prompting the user to insert a valid number
+            } else if (number < 10) { 
+                // Checks if 'number' is less than 10
+                alert("The number is lower than 10"); 
+                // If 'number' is less than 10, this line shows an alert box with the message "The number is lower than 10"
+            } else { 
+                // Executes if 'number' is 10 or greater
+                alert("The number is higher than 10"); 
+                // If 'number' is 10 or higher, this line shows an alert box with the message "The number is higher than 10"
+            }
+        }
+    </script> <!-- Ends the script section -->
+
+</body> <!-- Ends the body section -->
+</html> <!-- Closes the HTML document -->
